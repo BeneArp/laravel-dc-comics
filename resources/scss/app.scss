@@ -50,3 +50,24 @@ a{
         margin: 1.5em 0;
     }
 }
+
+.comic-form{
+
+    color: white;
+
+    input, button{
+        font-size: 16px;
+        padding: 0.5em 1.5em;
+        margin: 1.5em auto;
+        border-radius: 0.5em;
+        display: block;
+        width: 30%;
+        border: none;
+    }
+
+    button{
+        width: 5%;
+        background-color: rgb(12 124 236);
+        color: white;
+    }
+}
