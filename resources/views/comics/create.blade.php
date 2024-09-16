@@ -11,15 +11,16 @@
 
         <div>
 
-            <form action="#" method="GET" class="comic-form">
+            <form action="{{route('comics.store')}}" method="POST" class="comic-form">
+                @csrf
 
-                <input type="text" placeholder="Titolo Fumetto">
-                <input type="textarea" placeholder="Descrizione">
-                <input type="text" placeholder="Immagine Copertina">
-                <input type="text" placeholder="Prezzo">
-                <input type="text" placeholder="Serie">
-                <input type="text" placeholder="Data d'uscita">
-                <input type="text" placeholder="Tipo">
+                <input type="text" placeholder="Titolo Fumetto" id="title" name="title">
+                <textarea type="textarea" placeholder="Descrizione" cols="60" rows="8" id="description" name="description"></textarea>
+                <input type="text" placeholder="Immagine Copertina" id="thumb" name="thumb">
+                <input type="text" placeholder="Prezzo" id="price" name="price">
+                <input type="text" placeholder="Serie" id="series" name="series">
+                <input type="text" placeholder="Data d'uscita" id="sale_date" name="sale_date">
+                <input type="text" placeholder="Tipo" id="type" name="type">
 
                 <button type="submit">INVIA</button>
             </form>
