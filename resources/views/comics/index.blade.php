@@ -1,15 +1,41 @@
 {{-- questa view estende il file main.blade.php che è dentro la cartella view/layouts --}}
 @extends('layouts.main')
 
+{{-- @php
+    $menu = config('menues.homeNav');
+@endphp --}}
 
 @section('content')
-<div class="container my-5">
-    <h1>Comics</h1>
 
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos est amet eius quisquam error. Officiis mollitia temporibus molestias dolorem, repellat similique incidunt distinctio! Praesentium natus ratione voluptates sunt nam saepe.
-    </p>
-</div>
+    <section id="main">
+
+        <div class="label top">
+            <h2>CURRENT SERIES</h2>
+        </div>
+
+        <div class="container">
+
+            @foreach ( $comics as $comic )
+
+                <div class="card">
+
+                    <div class="cover">
+                        <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
+                    </div>
+
+                    <span>{{ $comic['type'] }}</span>
+
+                </div>
+
+            @endforeach
+
+        </div>
+
+        <div class="label center">
+            <h4>LOAD MORE</h4>
+        </div>
+
+    </section>
 
 @endsection
 
