@@ -1,0 +1,37 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.container{
+    @include flex;
+
+    .header-menu{
+        @include flex;
+        width: 60%;
+
+        a{
+            padding: 3.1em 0;
+        }
+    }
+
+    ul{
+        gap: 2em;
+
+        li{
+            :hover{
+                color: $header-nav-hover;
+            }
+
+            a{
+                display: inline-block;
+                color: $nav-a-color;
+                font-weight: $bold;
+                height: 100%;
+            }
+
+            .active{
+                color: $header-nav-hover;
+                border-bottom: 3px solid $header-nav-hover;
+            }
+        }
+    }
+}

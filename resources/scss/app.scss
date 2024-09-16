@@ -1,9 +1,36 @@
 
-@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
 
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import './partials/header';
+@import './partials/footer';
+@import './partials/home';
+
 
 
 body {
-    background-color: lightslategrey;
+    font-family: "Roboto", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 1em;
 }

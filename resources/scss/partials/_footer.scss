@@ -1,0 +1,71 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+footer{
+    // debug
+
+    #nav-container{
+        padding: 4em 0;
+        background-image: url('/img/footer-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+
+        nav{
+        @include flex;
+        width: 50%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4em;
+
+        h3{
+            margin: 0.8em 0;
+            color: $footer-title-color;
+        }
+
+        li{
+            margin-bottom: 0.8em;
+
+            a{
+                color: $footer-nav-color;
+            }
+        }
+
+        }
+
+        img{
+            position: absolute;
+            right: 20%;
+            top: -2%;
+        }
+    }
+
+    #footer-banner{
+        background-color: $footer-background;
+        padding: 3em 0;
+
+        .container{
+            @include flex;
+
+            .button{
+                color: $footer-title-color;
+                padding: 1.3em 1em;
+                border: 2px solid rgb(2 130 249);
+                cursor: pointer;
+                font-weight: $bold;
+            }
+
+            #social{
+                width: 25%;
+                @include flex;
+
+                h3{
+                    color: rgb(2 130 249);
+                    font-weight: $bold;
+                }
+            }
+        }
+
+    }
+}

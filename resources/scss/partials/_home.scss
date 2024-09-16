@@ -1,0 +1,93 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+#main-nav{
+    background-color: $main-nav-background;
+    padding: 3em;
+
+    .container{
+        @include flex;
+        justify-content: center;
+        gap: 2em;
+
+        div{
+            // border: 2px solid black;
+            width: calc(100% / 5);
+            text-align: center;
+
+            img{
+                vertical-align: middle;
+                margin-right: 1em;
+                height: 60px;
+                max-width: 20%;
+            }
+
+            span{
+                color: white;
+            }
+        }
+
+    }
+}
+
+#main{
+    background-color: $main-background;
+    padding: 5em;
+    position: relative;
+
+    .container{
+        @include flex;
+        flex-wrap: wrap;
+        gap: 0.8em;
+        align-items: flex-start;
+    }
+
+    .label{
+        display: inline-block;
+        background-color: $main-nav-background;
+        color: white;
+        padding: 0.8em 1.5em;
+        position: absolute;
+        cursor: default;
+    }
+
+    .top{
+        top: -3%;
+        left: 22%;
+    }
+
+    .center{
+        left: 50%;
+        transform: translate(-50%);
+        cursor: pointer;
+    }
+}
+
+
+.card{
+    margin: 2em 0;
+    width: 15%;
+    cursor: pointer;
+    position: relative;
+    // debug
+
+    .cover{
+        background-color: lightblue;
+        overflow: hidden;
+        height: 9vw;
+        width: 100%;
+
+        img{
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    span{
+        display: block;
+        color: white;
+        margin-top: 1em;
+        text-transform: uppercase;
+    }
+}

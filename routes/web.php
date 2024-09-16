@@ -14,8 +14,5 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/', [PageController::class, 'comic'])->name('comic');
 
-Route::get('/about', [PageController::class, 'about'])->name('about');
-
-Route::get('/contatti', [PageController::class, 'contacts'])->name('contacts');
