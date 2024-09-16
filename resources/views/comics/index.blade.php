@@ -20,7 +20,7 @@
                 <div class="card">
 
                     <div class="cover">
-                        <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
+                         <a href="{{route('comics.show', $comic->id)}}"><img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}"></a>
                     </div>
 
                     <span>{{ $comic['type'] }}</span>
