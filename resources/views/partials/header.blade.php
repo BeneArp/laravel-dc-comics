@@ -9,6 +9,9 @@
 
         <ul class="header-menu">
 
+            <a href="{{route('home')}}">HOME</a>
+            <a href="{{route('comics.index')}}">COMICS</a>
+            <a href="{{route('comics.create')}}">NEW COMIC</a>
 
         </ul>
     </div>
