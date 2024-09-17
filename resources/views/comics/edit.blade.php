@@ -11,10 +11,10 @@
 
         <div>
 
-            <form action="{{route('comics.update', $comic)}}" class="comic-form">
+            <form  action="{{ route('comics.update', $comic) }}" class="comic-form">
                 @csrf
 
-                @method("PUT")
+                @method('PUT')
 
                 <input type="text" placeholder="Titolo Fumetto" id="title" name="title" value="{{$comic->title}}">
                 <textarea type="textarea" placeholder="Descrizione" cols="60" rows="8" id="description" name="description">{{$comic->description}}</textarea>
