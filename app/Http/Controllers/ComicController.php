@@ -73,19 +73,19 @@ class ComicController extends Controller
 
         $data = $request->all();
 
-        // $edit_comic = Comic::find($id);
+        $edit_comic = Comic::find($id);
 
-        // $edit_comic->title = $data['title'];
-        // $edit_comic->description = $data['description'];
-        // $edit_comic->thumb = $data['thumb'];
-        // $edit_comic->price = $data['price'];
-        // $edit_comic->series = $data['series'];
-        // $edit_comic->sale_date = $data['sale_date'];
-        // $edit_comic->type = $data['type'];
-        // $edit_comic->save();
+        $edit_comic->title = $data['title'];
+        $edit_comic->description = $data['description'];
+        $edit_comic->thumb = $data['thumb'];
+        $edit_comic->price = $data['price'];
+        $edit_comic->series = $data['series'];
+        $edit_comic->sale_date = $data['sale_date'];
+        $edit_comic->type = $data['type'];
+        $edit_comic->save();
 
-        dump($data);
-        // return redirect()->route('comics.show', $edit_comic);
+        // dd($data);
+        return redirect()->route('comics.show', $edit_comic);
     }
 
     /**
