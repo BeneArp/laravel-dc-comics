@@ -70,7 +70,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return view('comic.index');
     }
 
     /**
