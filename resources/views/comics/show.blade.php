@@ -26,7 +26,15 @@
         </div>
 
         <div class="edit">
-            <a class="edit-button" href="{{route('comics.edit', $comic)}}">MODIFICA</a>
+            <a class="button" href="{{route('comics.edit', $comic)}}">MODIFICA</a>
+
+            <form action="#" method="POST" onsubmit="return confirm('Sei sicuro di voler eliminare il fumetto {{$comic->title}}?')">
+                @csrf
+
+                @method('DELETE')
+
+                <button class="button delate-button">ELIMINA</button>
+            </form>
         </div>
 
 

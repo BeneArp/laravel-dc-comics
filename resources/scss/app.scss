@@ -78,10 +78,21 @@ a{
     text-align: right;
     padding-top: 4em;
 
-    .edit-button{
+    .button{
         font-size: 16px;
         padding: 0.5em 1.5em;
+        border: none;
+        margin-left: 1em;
         background-color: darkgray;
+    }
+
+    form{
+        display: inline-block;
+
+        .delate-button{
+            background-color: darkred;
+            color: white;
+        }
     }
 }
 
