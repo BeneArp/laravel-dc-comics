@@ -71,3 +71,17 @@ a{
         color: white;
     }
 }
+
+.edit{
+    width: 70%;
+    margin: 0em auto;
+    text-align: right;
+    padding-top: 4em;
+
+    .edit-button{
+        font-size: 16px;
+        padding: 0.5em 1.5em;
+        background-color: darkgray;
+    }
+}
+

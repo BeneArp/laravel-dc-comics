@@ -25,6 +25,11 @@
 
         </div>
 
+        <div class="edit">
+            <a class="edit-button" href="{{route('comics.edit', $comic)}}">MODIFICA</a>
+        </div>
+
+
     </section>
 
 @endsection
