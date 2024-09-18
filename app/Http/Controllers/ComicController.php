@@ -33,14 +33,18 @@ class ComicController extends Controller
         $data = $request->all();
 
         $new_comic = new Comic;
-        $new_comic->title = $data['title'];
-        $new_comic->description = $data['description'];
-        $new_comic->thumb = $data['thumb'];
-        $new_comic->price = $data['price'];
-        $new_comic->series = $data['series'];
-        $new_comic->sale_date = $data['sale_date'];
-        $new_comic->type = $data['type'];
+
+        $new_comic->fill($data);
         $new_comic->save();
+
+        // $new_comic->title = $data['title'];
+        // $new_comic->description = $data['description'];
+        // $new_comic->thumb = $data['thumb'];
+        // $new_comic->price = $data['price'];
+        // $new_comic->series = $data['series'];
+        // $new_comic->sale_date = $data['sale_date'];
+        // $new_comic->type = $data['type'];
+        // $new_comic->save();
 
         return redirect()->route('comics.show', $new_comic);
     }
@@ -75,14 +79,16 @@ class ComicController extends Controller
 
         $edit_comic = Comic::find($id);
 
-        $edit_comic->title = $data['title'];
-        $edit_comic->description = $data['description'];
-        $edit_comic->thumb = $data['thumb'];
-        $edit_comic->price = $data['price'];
-        $edit_comic->series = $data['series'];
-        $edit_comic->sale_date = $data['sale_date'];
-        $edit_comic->type = $data['type'];
+        $edit_comic->fill($data);
         $edit_comic->save();
+        // $edit_comic->title = $data['title'];
+        // $edit_comic->description = $data['description'];
+        // $edit_comic->thumb = $data['thumb'];
+        // $edit_comic->price = $data['price'];
+        // $edit_comic->series = $data['series'];
+        // $edit_comic->sale_date = $data['sale_date'];
+        // $edit_comic->type = $data['type'];
+        // $edit_comic->save();
 
         // dd($data);
         return redirect()->route('comics.show', $edit_comic);
