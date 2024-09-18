@@ -107,3 +107,71 @@ a{
     font-size: 15px;
     color: red;
 }
+
+
+#page-not-found{
+    overflow: hidden;
+    background-color: rgb(28 28 28);
+    position: relative;
+
+    img{
+        max-height: 100vh;
+        width: 100%;
+    }
+
+    .batman{
+        width: 85%;
+        position: absolute;
+        bottom: -8%;
+        right: 2%;
+    }
+
+    .signal{
+        background-color: yellow;
+        height: 15vw;
+        width: 15vw;
+        position: absolute;
+        left: 50%;
+        top: 8%;
+        transform: translate(-50%);
+        border-radius: 50%;
+        overflow: hidden;
+        // animation-name: hide;
+        // animation-duration: 0.8s;
+        // animation-delay: 1s;
+
+        // @keyframes hide {
+        //     100%{
+        //         opacity: 0;
+        //     }
+        // }
+
+        img{
+            width: 85%;
+            position: absolute;
+            left: 50%;
+            top: 28%;
+            transform: translate(-50%);
+        }
+    }
+
+    .error-message{
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 22%;
+        transform: translate(-50%);
+
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .active{
+        display: block;
+    }
+}
+
+
+
