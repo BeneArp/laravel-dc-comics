@@ -72,11 +72,11 @@ class ComicController extends Controller
      */
     public function show(string $id)
     {
+        $comic = Comic::find($id);
+
         if(!isset($comic)){
             abort(404);
         }
-
-        $comic = Comic::find($id);
 
         return view('comics.show', compact('comic'));
     }
