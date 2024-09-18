@@ -70,6 +70,10 @@ a{
         background-color: rgb(12 124 236);
         color: white;
     }
+
+    .invalid{
+        border: 2px solid red;
+    }
 }
 
 .edit{
@@ -96,3 +100,10 @@ a{
     }
 }
 
+
+.error{
+    width: fit-content;
+    margin: 0em auto;
+    font-size: 15px;
+    color: red;
+}
